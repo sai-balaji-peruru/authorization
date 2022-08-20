@@ -3,8 +3,8 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:sa-east-1:274201610284:task-definition/authorization-task-definition:1"
+        TaskDefinition: "arn:aws:ecs:eu-north-1:274201610284:task-definition/authorization-task:1"
         LoadBalancerInfo:
-          ContainerName: "authorization-container"
+          ContainerName: "auth-container"
           ContainerPort: "9095"
         PlatformVersion: "LATEST"
