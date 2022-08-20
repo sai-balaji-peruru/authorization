@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:sa-east-1:274201610284:task-definition/authorization:1"
+        LoadBalancerInfo:
+          ContainerName: "authorization-microservice-psb"
+          ContainerPort: "9095"
+        PlatformVersion: "LATEST"
